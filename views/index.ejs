@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Recipe</title>
+</head>
+<body>
+    <h1><%= dataFromSpoonacular.title %></h1>
+    <div><img src="<%= dataFromSpoonacular.imageUrl %>" alt="Recipe image"></div>
+    <h2>Summary</h2>
+    <div><p><%- dataFromSpoonacular.summary %></p></div>
+    <h2>Ingredients</h2>
+    <div><% for (let i = 0; i < dataFromSpoonacular.ingredients.length; i++) { %>
+       <ul> 
+        <li><%= dataFromSpoonacular.ingredients[i].measures.metric.amount %>
+        <%= dataFromSpoonacular.ingredients[i].measures.metric.unitShort %>
+        <b><%= dataFromSpoonacular.ingredients[i].name %></b></li></ul>
+    <% } %></div>
+    <h2>Instructions</h2>
+    <div><p><%- dataFromSpoonacular.instructions %></p></div>
+</body>
+</html>

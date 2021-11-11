@@ -1,0 +1,25 @@
+body{
+    background-color: slategray;
+    color: white;
+}
+h1 {
+    text-align: center;
+    background-color: black;
+}
+h2{
+    text-align: left;
+    background-color: black;
+}
+img {
+    float:left;
+    width: 40%;
+}
+.right{
+    float: right;
+    width: 60%;
+
+}
+.bottom{
+    width: 100%;
+    float: left;
+}
